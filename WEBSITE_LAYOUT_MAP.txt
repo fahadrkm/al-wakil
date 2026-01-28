@@ -1,4 +1,4 @@
-🌐 AL WAKIL WEBSITE - VISUAL LAYOUT MAP
+🌐 AL WAKIL WEBSITE - COMPLETE VISUAL LAYOUT MAP
 ================================================
 
 📱 NAVIGATION BAR (Fixed at top)
@@ -44,6 +44,40 @@
     └── Card 2: 🖼️ styling-cover.jpg (400x300px)
         └── Overlay: "Interior Styling"
 
+👥 ABOUT SECTION (NEW)
+├── Left side:
+│   ├── Title: "About Us - Award-Winning Interior Design Since 2003"
+│   ├── Description paragraphs
+│   └── Statistics: 20+ Years | 1000+ Projects | 50+ Awards
+└── Right side: 🖼️ about-team.jpg (600x400px)
+
+🏆 PORTFOLIO SECTION (NEW)
+├── Title: "Our Work - Featured Projects"
+├── Description text
+└── Portfolio Grid (4 projects):
+    ├── 🖼️ project-1.jpg (400x300px) - "Modern Living Room"
+    ├── 🖼️ project-2.jpg (400x300px) - "Luxury Bedroom"
+    ├── 🖼️ project-3.jpg (400x300px) - "Kitchen Renovation"
+    └── 🖼️ project-4.jpg (400x300px) - "Office Interior"
+
+💬 TESTIMONIALS SECTION (NEW)
+├── Title: "Client Reviews - What Our Clients Say"
+└── Testimonial Cards (3 cards):
+    ├── Card 1: 🖼️ client-1.jpg (100x100px, circle) - Sarah Johnson
+    ├── Card 2: 🖼️ client-2.jpg (100x100px, circle) - Raj Patel
+    └── Card 3: 🖼️ client-3.jpg (100x100px, circle) - Priya Sharma
+
+❓ FAQ SECTION (NEW)
+├── Title: "FAQ's - Frequently Asked Questions"
+├── Description text
+└── Accordion FAQ Items (6 questions):
+    ├── "How long does a typical interior design project take?"
+    ├── "What is included in your interior design services?"
+    ├── "Do you work within specific budgets?"
+    ├── "Can I see a preview of the design before implementation?"
+    ├── "Do you handle both residential and commercial projects?"
+    └── "What areas do you serve?"
+
 📞 CONTACT SECTION
 ├── Title: "Get In Touch"
 ├── Description: "Ready to transform your space?"
@@ -56,10 +90,19 @@
 ================================================
 MOBILE VIEW CHANGES:
 - Hero floating image: HIDDEN on mobile
+- About section: Stacked vertically (text above image)
 - VR section: Stacked vertically (image below text)
+- Portfolio grid: Single column
+- Testimonials: Single column
 - Service cards: Single column
 - Navigation: Hamburger menu
 
 TOTAL MEDIA FILES NEEDED:
-✅ 9 Images + 1 Video = 10 files total
+✅ 15 Images + 1 Video = 16 files total
+
+NEW SECTIONS ADDED:
+✅ About Section (with team image and statistics)
+✅ Portfolio Section (with 4 project images)
+✅ Testimonials Section (with 3 client images)
+✅ FAQ Section (with interactive accordion)
 ================================================

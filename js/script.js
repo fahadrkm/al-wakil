@@ -271,3 +271,164 @@ function initLazyLoading() {
 
 // Initialize lazy loading
 document.addEventListener('DOMContentLoaded', initLazyLoading);
+
+// FAQ Accordion functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+// Initialize FAQ when DOM is loaded
+document.addEventListener('DOMContentLoaded', initFAQ);
+
+// Portfolio hover effects
+function initPortfolioEffects() {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    portfolioItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Initialize portfolio effects
+document.addEventListener('DOMContentLoaded', initPortfolioEffects);
+
+// Testimonials carousel (optional enhancement)
+function initTestimonialsCarousel() {
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    if (!testimonialsGrid) return;
+    
+    // Add touch/swipe support for mobile
+    let startX = 0;
+    let scrollLeft = 0;
+    
+    testimonialsGrid.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - testimonialsGrid.offsetLeft;
+        scrollLeft = testimonialsGrid.scrollLeft;
+    });
+    
+    testimonialsGrid.addEventListener('touchmove', (e) => {
+        if (!startX) return;
+        
+        e.preventDefault();
+        const x = e.touches[0].pageX - testimonialsGrid.offsetLeft;
+        const walk = (x - startX) * 2;
+        testimonialsGrid.scrollLeft = scrollLeft - walk;
+    });
+    
+    testimonialsGrid.addEventListener('touchend', () => {
+        startX = 0;
+    });
+}
+
+// Initialize testimonials carousel
+document.addEventListener('DOMContentLoaded', initTestimonialsCarousel);
+
+// Enhanced scroll animations for new sections
+function initEnhancedScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                
+                // Special animations for specific elements
+                if (entry.target.classList.contains('stat-item')) {
+                    animateCounter(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+    
+    // Observe new elements
+    const newAnimateElements = document.querySelectorAll('.about-text, .about-image, .stat-item, .portfolio-item, .testimonial-item, .faq-item');
+    
+    newAnimateElements.forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Counter animation for statistics
+function animateCounter(element) {
+    const counter = element.querySelector('h3');
+    if (!counter) return;
+    
+    const target = parseInt(counter.textContent);
+    const duration = 2000; // 2 seconds
+    const step = target / (duration / 16); // 60fps
+    let current = 0;
+    
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        
+        // Format the number
+        if (target >= 1000) {
+            counter.textContent = Math.floor(current) + '+';
+        } else {
+            counter.textContent = Math.floor(current) + '+';
+        }
+    }, 16);
+}
+
+// Initialize enhanced scroll animations
+document.addEventListener('DOMContentLoaded', initEnhancedScrollAnimations);
+
+// Smooth reveal animations for sections
+function addSectionRevealAnimations() {
+    const sections = document.querySelectorAll('section');
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        sectionObserver.observe(section);
+    });
+}
+
+// Initialize section reveal animations
+document.addEventListener('DOMContentLoaded', addSectionRevealAnimations);

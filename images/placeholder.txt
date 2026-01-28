@@ -1,5 +1,6 @@
 Placeholder Images Needed:
 
+ORIGINAL IMAGES:
 1. interior-1.jpg (60x60px, circular crop recommended)
 2. interior-2.jpg (60x60px, circular crop recommended)  
 3. interior-3.jpg (60x60px, circular crop recommended)
@@ -10,5 +11,17 @@ Placeholder Images Needed:
 8. renovation-cover.jpg (400x300px, renovation work)
 9. styling-cover.jpg (400x300px, interior styling work)
 
+NEW IMAGES FOR ADDITIONAL SECTIONS:
+10. about-team.jpg (600x400px, team photo or office interior)
+11. project-1.jpg (400x300px, modern living room project)
+12. project-2.jpg (400x300px, luxury bedroom project)
+13. project-3.jpg (400x300px, kitchen renovation project)
+14. project-4.jpg (400x300px, office interior project)
+15. client-1.jpg (100x100px, client headshot - Sarah Johnson)
+16. client-2.jpg (100x100px, client headshot - Raj Patel)
+17. client-3.jpg (100x100px, client headshot - Priya Sharma)
+
 All images should be high-quality interior design photos that represent Al Wakil's work.
 Recommended formats: JPG for photos, PNG for graphics with transparency.
+
+TOTAL: 15 images needed for complete website functionality.

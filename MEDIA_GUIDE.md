@@ -1,6 +1,121 @@
 # 📸 Complete Media Guide for Al Wakil Website
 
-## 🖼️ **IMAGES REQUIRED** (9 images total)
+## 🖼️ **IMAGES REQUIRED** (15 images total)
+
+### **1. Hero Section - Small Profile Images**
+**Location:** Hero section, stacked circular images
+**Files needed:**
+- `images/interior-1.jpg`
+- `images/interior-2.jpg` 
+- `images/interior-3.jpg`
+
+**Dimensions:** 60x60 pixels (minimum) - 200x200 pixels (recommended)
+**Format:** JPG
+**Content:** Interior design work samples, room photos
+**Note:** Will be displayed as small circular images, so crop to square format
+
+---
+
+### **2. Hero Section - Floating Image**
+**Location:** Right side of hero section (desktop only)
+**File needed:** `images/hero-floating.jpg`
+
+**Dimensions:** 300x400 pixels (minimum) - 600x800 pixels (recommended)
+**Format:** JPG
+**Content:** Beautiful interior design photo, room transformation
+**Note:** Portrait orientation, will be rotated 15 degrees
+
+---
+
+### **3. Video Section - Poster/Thumbnail**
+**Location:** Video section background (shows before video loads)
+**File needed:** `images/video-poster.jpg`
+
+**Dimensions:** 1920x1080 pixels (Full HD)
+**Format:** JPG
+**Content:** Interior design showcase, should match video content
+**Note:** This appears as video thumbnail while loading
+
+---
+
+### **4. Services Preview Section**
+**Location:** "What We Offer" section
+**File needed:** `images/services-preview.jpg`
+
+**Dimensions:** 800x600 pixels (minimum) - 1200x900 pixels (recommended)
+**Format:** JPG
+**Content:** Interior design showcase, multiple rooms or before/after
+**Note:** Main showcase image for services
+
+---
+
+### **5. VR Announcement Section**
+**Location:** "Home Scape VR" section
+**File needed:** `images/vr-thumbnail.jpg`
+
+**Dimensions:** 600x400 pixels (minimum) - 900x600 pixels (recommended)
+**Format:** JPG
+**Content:** VR headset, 3D room visualization, or modern tech setup
+**Note:** Should represent VR/technology theme
+
+---
+
+### **6. Service Cards**
+**Location:** Services section cards
+**Files needed:**
+- `images/renovation-cover.jpg`
+- `images/styling-cover.jpg`
+
+**Dimensions:** 400x300 pixels (minimum) - 800x600 pixels (recommended)
+**Format:** JPG
+**Content:** 
+- renovation-cover.jpg: Construction, renovation work in progress
+- styling-cover.jpg: Finished styled interior, decorative elements
+**Note:** Landscape orientation, will have text overlay
+
+---
+
+### **7. About Section**
+**Location:** About section
+**File needed:** `images/about-team.jpg`
+
+**Dimensions:** 600x400 pixels (minimum) - 1200x800 pixels (recommended)
+**Format:** JPG
+**Content:** Team photo, office interior, or professional workspace
+**Note:** Should represent the company/team professionally
+
+---
+
+### **8. Portfolio Section**
+**Location:** Portfolio grid section
+**Files needed:**
+- `images/project-1.jpg`
+- `images/project-2.jpg`
+- `images/project-3.jpg`
+- `images/project-4.jpg`
+
+**Dimensions:** 400x300 pixels (minimum) - 800x600 pixels (recommended)
+**Format:** JPG
+**Content:** Different completed interior design projects
+- project-1.jpg: Modern living room design
+- project-2.jpg: Luxury bedroom design
+- project-3.jpg: Kitchen renovation
+- project-4.jpg: Office interior design
+**Note:** Landscape orientation, will have hover overlays with project details
+
+---
+
+### **9. Testimonials Section**
+**Location:** Client testimonials section
+**Files needed:**
+- `images/client-1.jpg`
+- `images/client-2.jpg`
+- `images/client-3.jpg`
+
+**Dimensions:** 100x100 pixels (minimum) - 200x200 pixels (recommended)
+**Format:** JPG
+**Content:** Professional headshots or placeholder client photos
+**Note:** Square format, will be displayed as circular images
 
 ### **1. Hero Section - Small Profile Images**
 **Location:** Hero section, stacked circular images
@@ -168,6 +283,7 @@
 
 ## 📋 **QUICK CHECKLIST:**
 
+### **Original Images:**
 - [ ] interior-1.jpg (60x60+, square crop)
 - [ ] interior-2.jpg (60x60+, square crop)
 - [ ] interior-3.jpg (60x60+, square crop)
@@ -177,6 +293,18 @@
 - [ ] vr-thumbnail.jpg (600x400+, landscape)
 - [ ] renovation-cover.jpg (400x300+, landscape)
 - [ ] styling-cover.jpg (400x300+, landscape)
+
+### **New Images for Additional Sections:**
+- [ ] about-team.jpg (600x400+, landscape)
+- [ ] project-1.jpg (400x300+, landscape)
+- [ ] project-2.jpg (400x300+, landscape)
+- [ ] project-3.jpg (400x300+, landscape)
+- [ ] project-4.jpg (400x300+, landscape)
+- [ ] client-1.jpg (100x100+, square)
+- [ ] client-2.jpg (100x100+, square)
+- [ ] client-3.jpg (100x100+, square)
+
+### **Video:**
 - [ ] interior-showcase.mp4 (1920x1080, under 50MB)
 
-**Total:** 9 images + 1 video = 10 media files needed
+**Total:** 15 images + 1 video = 16 media files needed
