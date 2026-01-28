@@ -1,0 +1,14 @@
+Placeholder Images Needed:
+
+1. interior-1.jpg (60x60px, circular crop recommended)
+2. interior-2.jpg (60x60px, circular crop recommended)  
+3. interior-3.jpg (60x60px, circular crop recommended)
+4. hero-floating.jpg (300x400px, interior design photo)
+5. video-poster.jpg (1920x1080px, video thumbnail)
+6. services-preview.jpg (800x600px, interior design showcase)
+7. vr-thumbnail.jpg (600x400px, VR/technology related)
+8. renovation-cover.jpg (400x300px, renovation work)
+9. styling-cover.jpg (400x300px, interior styling work)
+
+All images should be high-quality interior design photos that represent Al Wakil's work.
+Recommended formats: JPG for photos, PNG for graphics with transparency.

@@ -1,0 +1,11 @@
+Video File Needed:
+
+1. interior-showcase.mp4
+   - Duration: 30-60 seconds
+   - Resolution: 1920x1080 (Full HD) or higher
+   - Format: MP4 (H.264 codec recommended)
+   - Content: Interior design showcase, room transformations, or company portfolio
+   - Should be optimized for web (compressed but good quality)
+   - Recommended file size: Under 50MB for good loading performance
+
+The video will autoplay (muted) in the hero section and should showcase Al Wakil's interior design work.

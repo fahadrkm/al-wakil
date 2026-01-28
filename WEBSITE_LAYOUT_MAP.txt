@@ -1,0 +1,65 @@
+🌐 AL WAKIL WEBSITE - VISUAL LAYOUT MAP
+================================================
+
+📱 NAVIGATION BAR (Fixed at top)
+├── Al Wakil Logo (SVG - built into code)
+├── Menu: Projects | Services | About | Contact  
+└── Phone & Email icons
+
+🎯 HERO SECTION (Full screen)
+├── Background: Animated particles + gradient
+├── Title: "Reimagine Your Space" (large text)
+├── Left side: 
+│   ├── 3 small circular images: 
+│   │   ├── 🖼️ interior-1.jpg (60x60px, circle)
+│   │   ├── 🖼️ interior-2.jpg (60x60px, circle)  
+│   │   └── 🖼️ interior-3.jpg (60x60px, circle)
+│   └── Text: "1000+ homes shaped by Alwakil"
+├── Center: "Get Started" button
+└── Right side: 🖼️ hero-floating.jpg (300x400px, rotated)
+
+🎬 VIDEO SECTION (Full width)
+├── Background video: 🎥 interior-showcase.mp4 (1920x1080)
+├── Poster image: 🖼️ video-poster.jpg (shows before video loads)
+└── Overlay text: "World Class Interior"
+
+💼 SERVICES PREVIEW SECTION
+├── Title: "We offer - Expert Interior Design Solutions"
+├── Description text
+└── Large image: 🖼️ services-preview.jpg (800x600px)
+
+🥽 VR ANNOUNCEMENT SECTION  
+├── Left side:
+│   ├── Title: "All New - Introducing Home Scape VR"
+│   ├── Description text
+│   └── "Learn more" button
+└── Right side: 🖼️ vr-thumbnail.jpg (600x400px)
+
+🏠 SERVICES SECTION
+├── Title: "Services - Renovation & Remodeling"
+├── "View All" button
+└── Service Cards (2 cards):
+    ├── Card 1: 🖼️ renovation-cover.jpg (400x300px)
+    │   └── Overlay: "Renovation & Remodeling"
+    └── Card 2: 🖼️ styling-cover.jpg (400x300px)
+        └── Overlay: "Interior Styling"
+
+📞 CONTACT SECTION
+├── Title: "Get In Touch"
+├── Description: "Ready to transform your space?"
+└── Contact buttons: Phone | Email
+
+🦶 FOOTER
+├── Al Wakil Logo
+└── Copyright text
+
+================================================
+MOBILE VIEW CHANGES:
+- Hero floating image: HIDDEN on mobile
+- VR section: Stacked vertically (image below text)
+- Service cards: Single column
+- Navigation: Hamburger menu
+
+TOTAL MEDIA FILES NEEDED:
+✅ 9 Images + 1 Video = 10 files total
+================================================
