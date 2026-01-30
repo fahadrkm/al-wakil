@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', addScrollToTop);
 
 // Performance optimization: Lazy load images
 function initLazyLoading() {
-    const images = document.querySelectorAll('img[src]');
+    const images = document.querySelectorAll('img[src]:not(.hero-slide)');
     
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -432,3 +432,163 @@ function addSectionRevealAnimations() {
 
 // Initialize section reveal animations
 document.addEventListener('DOMContentLoaded', addSectionRevealAnimations);
+
+// Professional Hero Slider with 3D effects
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const progressBar = document.querySelector('.progress-bar');
+    
+    if (!slides.length) return;
+
+    let current = 0;
+    let isTransitioning = false;
+    let slideTimer = null;
+    const slideInterval = 4000; // 4 seconds
+
+    function updateSlider() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        // Remove all classes
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active', 'prev', 'next');
+            indicators[index].classList.remove('active');
+        });
+
+        // Set current slide as active
+        slides[current].classList.add('active');
+        indicators[current].classList.add('active');
+
+        // Set previous and next slides
+        const prevIndex = current === 0 ? slides.length - 1 : current - 1;
+        const nextIndex = current === slides.length - 1 ? 0 : current + 1;
+
+        slides[prevIndex].classList.add('prev');
+        slides[nextIndex].classList.add('next');
+
+        // Reset progress bar animation
+        if (progressBar) {
+            progressBar.style.animation = 'none';
+            progressBar.offsetHeight; // Trigger reflow
+            progressBar.style.animation = `slideProgress ${slideInterval}ms linear`;
+        }
+
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 1200); // Match CSS transition duration
+    }
+
+    function nextSlide() {
+        current = (current + 1) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        if (isTransitioning || index === current) return;
+        current = index;
+        updateSlider();
+    }
+
+    function startAutoSlide() {
+        if (slideTimer) clearInterval(slideTimer);
+        slideTimer = setInterval(nextSlide, slideInterval);
+    }
+
+    function stopAutoSlide() {
+        if (slideTimer) clearInterval(slideTimer);
+    }
+
+    // Initialize slider
+    updateSlider();
+    startAutoSlide();
+
+    // Indicator click handlers
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            stopAutoSlide();
+            goToSlide(index);
+            // Restart auto-advance after user interaction
+            setTimeout(startAutoSlide, slideInterval);
+        });
+    });
+
+    // Pause on hover
+    const sliderContainer = document.querySelector('.hero-slider');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', () => {
+            stopAutoSlide();
+            if (progressBar) progressBar.style.animationPlayState = 'paused';
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            startAutoSlide();
+            if (progressBar) progressBar.style.animationPlayState = 'running';
+        });
+    }
+
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+
+    if (sliderContainer) {
+        sliderContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            stopAutoSlide();
+            if (diff > 0) {
+                // Swipe left - next slide
+                nextSlide();
+            } else {
+                // Swipe right - previous slide
+                current = current === 0 ? slides.length - 1 : current - 1;
+                updateSlider();
+            }
+            // Restart auto-advance after swipe
+            setTimeout(startAutoSlide, slideInterval);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initHeroSlider);
+
+// Room Categories Grid functionality
+function initRoomCategoriesGrid() {
+    // Add click functionality
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const title = this.querySelector('.grid-item-title').textContent;
+            console.log(`Clicked on: ${title}`);
+            // You can add navigation or other functionality here
+            // window.location.href = `/${title.toLowerCase()}.html`;
+        });
+    });
+
+    // Add touch support for mobile
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        });
+                     
+        item.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.classList.remove('touch-active');
+            }, 300);
+        });
+    });
+}
+
+// Initialize room categories grid
+document.addEventListener('DOMContentLoaded', initRoomCategoriesGrid);
