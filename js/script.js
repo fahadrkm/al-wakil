@@ -303,11 +303,20 @@ function initFAQ() {
 // Initialize FAQ when DOM is loaded
 document.addEventListener('DOMContentLoaded', initFAQ);
 
-// Portfolio hover effects
+// Portfolio hover effects and text animation
 function initPortfolioEffects() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const portfolioSection = document.querySelector('.portfolio');
     
-    portfolioItems.forEach(item => {
+    portfolioItems.forEach((item, index) => {
+        const overlay = item.querySelector('.portfolio-overlay');
+        
+        // Set sequential delays so only one shows at a time
+        // Each item gets 2.5s delay (25% of 10s total cycle)
+        if (overlay) {
+            overlay.style.animationDelay = `${index * 2}s`;
+        }
+        
         item.addEventListener('mouseenter', () => {
             item.style.transform = 'translateY(-10px) scale(1.02)';
         });
@@ -316,6 +325,26 @@ function initPortfolioEffects() {
             item.style.transform = 'translateY(0) scale(1)';
         });
     });
+    
+    // Pause animations when section is not visible for performance
+    if (portfolioSection) {
+        const portfolioObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const overlays = entry.target.querySelectorAll('.portfolio-overlay');
+                if (entry.isIntersecting) {
+                    overlays.forEach(overlay => {
+                        overlay.style.animationPlayState = 'running';
+                    });
+                } else {
+                    overlays.forEach(overlay => {
+                        overlay.style.animationPlayState = 'paused';
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        portfolioObserver.observe(portfolioSection);
+    }
 }
 
 // Initialize portfolio effects
@@ -444,7 +473,7 @@ function initHeroSlider() {
     let current = 0;
     let isTransitioning = false;
     let slideTimer = null;
-    const slideInterval = 4000; // 4 seconds
+    const slideInterval = 2000; // 2 seconds
 
     function updateSlider() {
         if (isTransitioning) return;
