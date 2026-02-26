@@ -155,17 +155,49 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(255, 215, 0, 0.1);
-    color: #FFD700;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-.contact-btn:hover {
-    background: rgba(255, 215, 0, 0.2);
+/* Phone icon - Blue */
+.contact-btn:nth-child(1) {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.contact-btn:nth-child(1):hover {
+    background: rgba(33, 150, 243, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-    color: #FFD700;
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+    color: #2196F3;
+}
+
+/* WhatsApp icon - Green */
+.contact-btn:nth-child(2) {
+    background: rgba(37, 211, 102, 0.1);
+    color: #25D366;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn:nth-child(2):hover {
+    background: rgba(37, 211, 102, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    color: #25D366;
+}
+
+/* Email icon - Red */
+.contact-btn:nth-child(3) {
+    background: rgba(234, 67, 53, 0.1);
+    color: #EA4335;
+    border: 1px solid rgba(234, 67, 53, 0.3);
+}
+
+.contact-btn:nth-child(3):hover {
+    background: rgba(234, 67, 53, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(234, 67, 53, 0.4);
+    color: #EA4335;
 }
 
 /* Mobile Menu */
