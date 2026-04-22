@@ -1502,6 +1502,13 @@ img.loaded {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
+.ravena-about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
 /* Portfolio Section */
 .portfolio {
     background: #0a0a0a;
