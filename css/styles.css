@@ -2888,6 +2888,11 @@ img.loaded {
     border-color: #ff0000;
 }
 
+.social-icon.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+}
+
 .social-icon svg {
     width: 20px;
     height: 20px;
